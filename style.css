@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  /* background-color: red; */
+  display: flex;
+  border: 2.5px solid #dadada;
+}
+#left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+#right {
+  width: 50%;
+  height: 100%;
+  /* background-color: rgba(252, 247, 237, 0.438); */
+  position: relative;
+}
+#left #nav {
+  width: 100%;
+  height: 86px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  position: relative;
+  z-index: 9999;
+  animation-name: movec;
+  animation-duration: 1.59s;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+#left #nav h3 {
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.7vw;
+  color: #000;
+}
+#left #nav i {
+  font-size: 1.55vw;
+  font-weight: 700;
+  margin-right: 30px;
+}
+#left > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 4% 85%;
+  z-index: 999;
+  animation-name: moveb;
+  animation-duration: 2s;
+  /* animation-delay: 0.3s; */
+  transition: cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+}
+#left h1 {
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  font-size: 6.4vw;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: right;
+  text-transform: capitalize;
+  opacity: 0.92;
+  font-weight: 600;
+  z-index: 999;
+  animation-name: moved;
+  animation-duration: 1.59s;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+#right #a {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  object-position: center;
+  /* border: 3px solid #dadada; */
+  animation-name: move;
+  animation-duration: 1.5s;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+#right #b {
+  position: absolute;
+  top: 38%;
+  left: 10%;
+  height: 245px;
+  width: 195px;
+  object-fit: cover;
+  object-position: bottom;
+  /* border: 3px solid #dadada; */
+  animation-name: move;
+  animation-duration: 1.5s;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+#right #c {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  /* border: 3px solid #dadada; */
+
+  height: 170px;
+  width: 160px;
+  object-fit: cover;
+  animation-name: move;
+  animation-duration: 1.5s;
+  /* animation-delay: 0.2s; */
+
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+#right h2 {
+  text-transform: capitalize;
+  position: absolute;
+  top: 29%;
+  left: 61%;
+  transform: rotate(-90deg);
+  font-size: 3.55vw;
+  white-space: nowrap;
+  animation-name: movea;
+  animation-duration: 5s;
+  transition: cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+#over {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(201, 67, 67);
+  height: 100%;
+  z-index: 99;
+  animation-name: move;
+  animation-duration: 1.5s;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+@keyframes move {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes movea {
+  0% {
+    /* transform: translatey(-6000%); */
+    /* transform: rotate(-90deg); */
+    opacity: 0;
+  }
+  100% {
+    /* transform: translatey(0);
+    transform: rotate(-90deg); */
+    opacity: 1;
+  }
+}
+@keyframes moveb {
+  0% {
+    transform: translateX(300%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes movec {
+  0% {
+    transform: translatey(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+@keyframes moved {
+  0% {
+    transform: translatey(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
